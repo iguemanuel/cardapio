@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/output.css">
+
+    <link href="./styles/output.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Cardapio Online</title>
+</head>
+<body>
+    <header class="relative w-full h-[420px] bg-home bg-cover bg-center">
+        <div class="absolute inset-0 bg-zinc-900 bg-opacity-75"></div>
+        
+        <div class="relative w-full h-full flex flex-col justify-center items-center">
+          <img class="w-32 h-32 rounded-full shadow-lg hover:scale-200 duration-200" src="./assets/hamb-1.png" alt="Logo"/>
+          <h1 class="text-4xl mt-4 mb-4 font-bold text-white">Código do Chef</h1>
+
+          <span class="text-white font-medium">Rua XV de Novembro, Guarapuava - PR</span>
+
+          <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span" >
+            <span class="text-white font-medium">Segunda a Domingo das 18:00 as 23:00</span>
+          </div>
+
+        </div>
+    </header>
+            <h2 class="md:text-3xl text-black text-2xl text-center font-bold mt-9 mb-9">Conheça nosso menu</h2>
+        <!-- Menu -->
+    <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 lg:grid-cols-3 mx-auto max-w-7xl px-2 mb-16">
+
+        <!-- Produto-->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-1.png" alt="Hamburguer Smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200">
+                <div>
+                    <h3 class="text-lg font-bold">Hamburguer Smash</h3>
+                    <p class="text-sm">Pão levinho de fermentação natural com hamburger de 180g, queijo, salada, tomate e maionese da casa. </p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p class="font-bold">R$ 18.90</p>
+                        <button class="bg-gray-900 px-2 py-1 roundend add-to-cart-btn mt-3"
+                        data-name="Hamburguer Smash"
+                        data-price="18.90"> 
+                            <i class="fa-solid fa-cart-plus text-lg text-white rounded-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Produto-->
+    
+            <!-- Produto-->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-2.png" alt="Hamburguer Duplo" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200">
+                <div>
+                    <h3 class="text-lg font-bold">Hamburguer Duplo</h3>
+                    <p class="text-sm">Pão levinho de fermentação natural com dois hamburgers de 180g, queijo, salada, tomate e maionese da casa. </p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p class="font-bold">R$ 30.90</p>
+                        <button class="bg-gray-900 px-2 py-1 roundend add-to-cart-btn mt-3"
+                        data-name="Hamburguer Duplo"
+                        data-price="30.90"> 
+                            <i class="fa-solid fa-cart-plus text-lg text-white rounded-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Produto-->  
+
+            <!-- Produto-->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-3.png" alt="Hamburguer Salad" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200">
+                <div>
+                    <h3 class="text-lg font-bold">Hamburguer Salad</h3>
+                    <p class="text-sm">Pão levinho de fermentação natural com hamburger de 180g, salada, tomate e maionese da casa. </p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p class="font-bold">R$ 15.90</p>
+                        <button class="bg-gray-900 px-2 py-1 roundend add-to-cart-btn mt-3"
+                        data-name="Hamburguer Salada"
+                        data-price="15.90"> 
+                            <i class="fa-solid fa-cart-plus text-lg text-white rounded-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Produto-->
+
+            <!-- Produto-->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-4.png" alt="Hamburguer da Casa" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200">
+                <div>
+                    <h3 class="text-lg font-bold">Hamburguer da Casa</h3>
+                    <p class="text-sm">Pão levinho de fermentação natural com hamburger de 180g, salada, tomate e maionese da casa. </p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p class="font-bold">R$ 27.90</p>
+                        <button class="bg-gray-900 px-2 py-1 roundend add-to-cart-btn mt-3"
+                        data-name="Hamburguer da Casa"
+                        data-price="27.90"> 
+                            <i class="fa-solid fa-cart-plus text-lg text-white rounded-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Produto-->
+
+        </main>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl text-center mt-9 mb-9">Bebidas</h2>
+        </div>
+
+        <!-- GRID DE BEBIDAS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 lg:grid-cols-3 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+            <!-- Bebida-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/refri-1.png" alt="Coca Lata" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200">
+
+                <div class="w-full">
+                    <h3 class="text-lg font-bold">Coca Lata</h3>
+                    <div class="flex items-center gap-2 justify-between">
+                        <p class="font-bold">R$ 5.90</p>
+                        <button class="bg-gray-900 px-2 py-1 roundend add-to-cart-btn mt-3"
+                        data-name="Coca Lata"
+                        data-price="5.90"> 
+                            <i class="fa-solid fa-cart-plus text-lg text-white rounded-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Bebida-->
+
+            <!-- Bebida-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/refri-2.png" alt="Guarana lata" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200">
+
+                <div class="w-full">
+                    <h3 class="text-lg font-bold">Guarana lata</h3>
+                    <div class="flex items-center gap-2 justify-between">
+                        <p class="font-bold">R$ 5.90</p>
+                        <button class="bg-gray-900 px-2 py-1 roundend add-to-cart-btn mt-3"
+                        data-name="Guarana lata"
+                        data-price="5.90"> 
+                            <i class="fa-solid fa-cart-plus text-lg text-white rounded-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Bebida-->
+            
+            
+
+        </div>
+
+
+
+
+
+    </div>
+    
+</body>
+</html>
