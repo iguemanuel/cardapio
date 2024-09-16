@@ -119,21 +119,21 @@ adressInput.addEventListener('input', function(event) {
 
 checkoutBtn.addEventListener('click', function() {
 
- const isOpen = checkIsOpen();
-    if(!isOpen) {
-     Toastify({
-         text: "Restaurante Fechado, volte mais tarde!",
-         duration: 3000,
-         close: true,
-         gravity: "top", // `top` or `bottom`
-         position: "right", // `left`, `center` or `right`
-         stopOnFocus: true, // Prevents dismissing of toast on hover
-         style: {
-           background: "#ee4444",
-         },
-       }).showToast();
-     return;
-    }
+//  const isOpen = checkIsOpen();
+//     if(!isOpen) {
+//      Toastify({
+//          text: "Restaurante Fechado, volte mais tarde!",
+//          duration: 3000,
+//          close: true,
+//          gravity: "top", // `top` or `bottom`
+//          position: "right", // `left`, `center` or `right`
+//          stopOnFocus: true, // Prevents dismissing of toast on hover
+//          style: {
+//            background: "#ee4444",
+//          },
+//        }).showToast();
+//      return;
+//     }
 
     if(cart.length === 0) return;
     if(adressInput.value === '') {
