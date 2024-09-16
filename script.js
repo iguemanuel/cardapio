@@ -118,13 +118,47 @@ adressInput.addEventListener('input', function(event) {
 }) 
 
 checkoutBtn.addEventListener('click', function() {
+
+ const isOpen = checkIsOpen();
+    if(!isOpen) {
+     Toastify({
+         text: "Restaurante Fechado, volte mais tarde!",
+         duration: 3000,
+         close: true,
+         gravity: "top", // `top` or `bottom`
+         position: "right", // `left`, `center` or `right`
+         stopOnFocus: true, // Prevents dismissing of toast on hover
+         style: {
+           background: "#ee4444",
+         },
+       }).showToast();
+     return;
+    }
+
     if(cart.length === 0) return;
     if(adressInput.value === '') {
         adressWarn.classList.remove('hidden');
         return;
     }
 
-})
+    const cartItems = cart.map((item) => {
+        return `${item.name} - Qtd: ${item.quantidade} Preço: R$ ${item.price.toFixed(2)} `;
+    }).join('\n');
+    
+    // Obtém o total do carrinho
+    const total = cartTotal.textContent;
+
+    // Concatena a mensagem e os itens do carrinho, com quebras de linha
+    const message = encodeURIComponent(`Boa noite! gostaria de fazer um pedido: \n${cartItems}\nEndereço: ${adressInput.value}\nTotal: ${total}`);
+    const phone = "";
+    
+    window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+
+    cart = [];
+    updateCartModal();
+});
+
+
 
 function checkIsOpen(){
     const data = new Date();
