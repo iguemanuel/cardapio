@@ -6,7 +6,7 @@
     "dev": "npx tailwindcss -i ./styles/style.css -o ./styles/output.css --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": "Igor Emanuel",
   "license": "ISC",
   "description": "",
   "devDependencies": {
