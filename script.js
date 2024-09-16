@@ -119,21 +119,21 @@ adressInput.addEventListener('input', function(event) {
 
 checkoutBtn.addEventListener('click', function() {
 
-//  const isOpen = checkIsOpen();
-//     if(!isOpen) {
-//      Toastify({
-//          text: "Restaurante Fechado, volte mais tarde!",
-//          duration: 3000,
-//          close: true,
-//          gravity: "top", // `top` or `bottom`
-//          position: "right", // `left`, `center` or `right`
-//          stopOnFocus: true, // Prevents dismissing of toast on hover
-//          style: {
-//            background: "#ee4444",
-//          },
-//        }).showToast();
-//      return;
-//     }
+ const isOpen = checkIsOpen();
+    if(!isOpen) {
+     Toastify({
+         text: "Restaurante Fechado, volte mais tarde!",
+         duration: 3000,
+         close: true,
+         gravity: "top", // `top` or `bottom`
+         position: "right", // `left`, `center` or `right`
+         stopOnFocus: true, // Prevents dismissing of toast on hover
+         style: {
+           background: "#ee4444",
+         },
+       }).showToast();
+     return;
+    }
 
     if(cart.length === 0) return;
     if(adressInput.value === '') {
@@ -150,7 +150,7 @@ checkoutBtn.addEventListener('click', function() {
 
     // Concatena a mensagem e os itens do carrinho, com quebras de linha
     const message = encodeURIComponent(`Boa noite! gostaria de fazer um pedido: \n${cartItems}\nEndereço: ${adressInput.value}\nTotal: ${total}`);
-    const phone = "";
+    const phone = "5542991583814";
     
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
 
